@@ -1,0 +1,49 @@
+#include <stdio.h>
+
+
+int main(){
+    int linha;
+    int coluna;
+    int matriz[3][3];
+    int conta1=0;
+    int conta2=0;
+
+    for(linha=0; linha<3; linha++){
+        for(coluna=0; coluna<3; coluna++){
+        printf("Digite um numero: [%i],[%i]:", linha, coluna);
+        scanf("%i", &matriz[linha][coluna]);
+        }
+    }
+
+printf("Sua matriz ficou assim:\n");
+
+    for(linha=0;linha<3;linha++){
+        for(coluna=0;coluna<3;coluna++)
+        
+        printf("%i \t", matriz[linha][coluna]);
+        printf("\n\n");
+    }
+    
+//diagonal principal
+    
+    for(linha=0;linha<3;linha++){
+        for(coluna=0;coluna<3;coluna++)
+    if(linha==coluna)
+    conta1 += matriz[linha][coluna];
+    
+    }
+    
+//diagonalsecubdaria
+    
+    for(linha=0;linha<3;linha++){
+        for(coluna=0;coluna<3;coluna++)
+    if(linha+coluna==2)
+    conta2 += matriz[linha][coluna];
+    
+    }
+    
+printf("\n\n A soma da diagonal principal é :%d \n\n", conta1);
+printf("\n\n A soma da diagonal secundaria é :%d \n\n", conta2);
+
+return 0;
+}

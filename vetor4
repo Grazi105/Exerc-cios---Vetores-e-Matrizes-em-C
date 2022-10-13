@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+
+int main(){
+    int linhaA;
+    int colunaA;
+    int matrizA[50][50];
+    int valorl=0;
+    int valorc=0;
+    
+    //PRIMEIRA MATRIZ
+
+      printf ("escolha o tamanho da linha : ");
+      scanf("%d",&valorl);
+      printf ("escolha o tamanho da coluna : ");
+      scanf("%d",&valorc);
+      
+    for(linhaA=0; linhaA<valorl; linhaA++){
+        for(colunaA=0; colunaA<valorc; colunaA++){
+        printf("Digite um numero para primeira matriz: [%i],[%i]:", linhaA, colunaA);
+        scanf("%i", &matrizA[linhaA][colunaA]);
+        }
+    }
+
+printf("Sua matriz ficou assim:\n");
+
+    for(linhaA=0;linhaA<valorl;linhaA++){
+        for(colunaA=0;colunaA<valorc;colunaA++)
+        
+        printf("%i \t", matrizA[linhaA][colunaA]);
+        printf("\n\n");
+    }
+     
+
+    for(linhaA=0;linhaA<valorc;linhaA++){
+        for(colunaA=0;linhaA<valorl;colunaA++)
+        
+        printf("%i \t", matrizA[linhaA][colunaA]);
+        printf("\n\n");
+    }
+return 0;
+}

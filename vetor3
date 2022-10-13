@@ -1,0 +1,59 @@
+#include <stdio.h>
+
+
+int main(){
+    int linhaA;
+    int colunaA;
+    int linhaB;
+    int colunaB;
+    int matrizA[3][3];
+    int matrizB[3][3];
+    int conta1=0;
+    int conta2=0;
+    
+    //PRIMEIRA MATRIZ
+
+    for(linhaA=0; linhaA<3; linhaA++){
+        for(colunaA=0; colunaA<3; colunaA++){
+        printf("Digite um numero para primeira matriz: [%i],[%i]:", linhaA, colunaA);
+        scanf("%i", &matrizA[linhaA][colunaA]);
+         conta1 += matrizA[linhaA][colunaA];
+        }
+    }
+
+printf("Sua matriz primeira matriz ficou assim:\n");
+
+    for(linhaA=0;linhaA<3;linhaA++){
+        for(colunaA=0;colunaA<3;colunaA++)
+        
+        printf("%i \t", matrizA[linhaA][colunaA]);
+        printf("\n\n");
+    }
+    
+    // SEGUNDA MATRIZ
+    
+      for(linhaB=0; linhaB<3; linhaB++){
+        for(colunaB=0; colunaB<3; colunaB++){
+        printf("Digite um numero para segunda matriz: [%i],[%i]:", linhaB, colunaB);
+        scanf("%i", &matrizB[linhaB][colunaB]);
+         conta2 += matrizB[linhaB][colunaB];
+        }
+    }
+
+printf("Sua matriz segunda matriz ficou assim:\n");
+
+    for(linhaB=0;linhaB<3;linhaB++){
+        for(colunaB=0;colunaB<3;colunaB++)
+        
+        printf("%i \t", matrizB[linhaB][colunaB]);
+        printf("\n\n");
+    }
+        
+if (conta1+conta2==0){
+    printf ("MATRIZ OPOSTA");
+} else{
+    printf ("NÃO É MATRIZ OPOSTA");
+}
+
+return 0;
+}
